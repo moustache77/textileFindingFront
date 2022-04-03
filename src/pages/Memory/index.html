@@ -1,0 +1,276 @@
+
+
+      
+    //   getProduction() {
+    //     var chartDom = document.getElementById('main');
+    //     console.log(chartDom);
+    //     var myChart = this.$echarts.init(chartDom);
+    //     var option;
+
+    //     const updateFrequency = 1000;
+    //     const dimension = 0;
+    //     const countryColors = {
+    //       Australia: '#00008b',
+    //       Canada: '#f00',
+    //       China: '#ffde00',
+    //       Cuba: '#002a8f',
+    //       Finland: '#003580',
+    //       France: '#ed2939',
+    //       Germany: '#000',
+    //       Iceland: '#003897',
+    //       India: '#f93',
+    //       Japan: '#bc002d',
+    //       'North Korea': '#024fa2',
+    //       'South Korea': '#000',
+    //       'New Zealand': '#00247d',
+    //       Norway: '#ef2b2d',
+    //       Poland: '#dc143c',
+    //       Russia: '#d52b1e',
+    //       Turkey: '#e30a17',
+    //       'United Kingdom': '#00247d',
+    //       'United States': '#b22234'
+    //     };
+    //     $.when(
+    //       $.get('https://cdn.jsdelivr.net/npm/emoji-flags@1.3.0/data.json'),
+    //       $.get('http://124.223.32.208:8000/media/json_files/production.json')
+    //     ).done(function(res0, res1) {
+    //       const flags = res0[0];
+    //       const data = res1[0];
+    //       const years = [];
+    //       for (let i = 0; i < data.length; ++i) {
+    //         if (years.length === 0 || years[years.length - 1] !== data[i][4]) {
+    //           years.push(data[i][4]);
+    //         }
+    //       }
+
+    //       function getFlag(countryName) {
+    //         if (!countryName) {
+    //           return '';
+    //         }
+    //         return (
+    //           flags.find(function(item) {
+    //             return item.name === countryName;
+    //           }) || {}
+    //         ).emoji;
+    //       }
+    //       let startIndex = 0;
+    //       let startYear = years[startIndex];
+    //       option = {
+    //         grid: {
+    //           top: 10,
+    //           bottom: 30,
+    //           left: 130,
+    //           right: 80
+    //         },
+    //         xAxis: {
+    //           max: 'dataMax',
+    //           axisLabel: {
+    //             formatter: function(n) {
+    //               return Math.round(n) * 10 + '';
+    //             }
+    //           }
+    //         },
+    //         dataset: {
+    //           source: data.slice(1).filter(function(d) {
+    //             return d[4] === startYear;
+    //           })
+    //         },
+    //         yAxis: {
+    //           type: 'category',
+    //           inverse: true,
+    //           max: 10,
+    //           axisLabel: {
+    //             show: true,
+    //             fontSize: 14,
+    //             formatter: function(value) {
+    //               return value + '{flag|' + getFlag(value) + '}';
+    //             },
+    //             rich: {
+    //               flag: {
+    //                 fontSize: 25,
+    //                 padding: 5
+    //               }
+    //             }
+    //           },
+    //           animationDuration: 300,
+    //           animationDurationUpdate: 300
+    //         },
+    //         series: [{
+    //           realtimeSort: true,
+    //           seriesLayoutBy: 'column',
+    //           type: 'bar',
+    //           itemStyle: {
+    //             color: function(param) {
+    //               return countryColors[param.value[3]] || '#5470c6';
+    //             }
+    //           },
+    //           encode: {
+    //             x: dimension,
+    //             y: 3
+    //           },
+    //           label: {
+    //             show: true,
+    //             precision: 3,
+    //             position: 'right',
+    //             valueAnimation: true,
+    //             fontFamily: 'monospace'
+    //           }
+    //         }],
+    //         // Disable init animation.
+    //         animationDuration: 0,
+    //         animationDurationUpdate: updateFrequency,
+    //         animationEasing: 'linear',
+    //         animationEasingUpdate: 'linear',
+    //         graphic: {
+    //           elements: [{
+    //             type: 'text',
+    //             right: 160,
+    //             bottom: 60,
+    //             style: {
+    //               text: startYear,
+    //               font: 'bolder 80px monospace',
+    //               fill: 'rgba(100, 100, 100, 0.25)'
+    //             },
+    //             z: 100
+    //           }]
+    //         }
+    //       };
+    //       // console.log(option);
+    //       myChart.setOption(option);
+    //       for (let i = startIndex; i < years.length - 1; ++i) {
+    //         (function(i) {
+    //           setTimeout(function() {
+    //             updateYear(years[i + 1]);
+    //           }, (i - startIndex) * updateFrequency);
+    //         })(i);
+    //       }
+
+    //       function updateYear(year) {
+    //         let source = data.slice(1).filter(function(d) {
+    //           return d[4] === year;
+    //         });
+    //         option.series[0].data = source;
+    //         option.graphic.elements[0].style.text = year;
+    //         myChart.setOption(option);
+    //       }
+    //     });
+
+    //     option && myChart.setOption(option);
+    //   }
+
+    // }
+   
+
+// }
+
+
+
+    /* // .panel {
+    //       position: relative;
+    //       width: 500px;
+    //       height: 500px;
+    //       border: 1px solid rgba(25, 186, 139, 0.17);
+    //       background: rgba(255, 255, 255, 0.04);
+    //       padding: 0 0.1875rem 0.5rem;
+    //       margin-bottom: 0.1875rem;
+    //     }
+    // #chart {
+    //       float: left;
+    //       width: 500px;
+    //       height: 500px;
+    //     } */
+       /* .panel {
+          position: relative;
+          height: 550px;
+          width: 500px;
+          /* border: 1px solid rgba(25, 186, 139, 0.17); */
+          /* border: 2px solid rgba(8, 31, 241, 0.17); */
+          /* background-color: rgba(255, 255, 255, 0.04); */
+          /* background-color: hsla(160, 86%, 52%, 0.877);
+          padding: 0 0.1875rem 0.5rem;
+          margin-bottom: 0.1875rem;} */
+          
+          /* #chart {
+            float: left;
+           width: 500px;
+           height: 500px;
+          } */
+      
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery时间轴幻灯展示特效</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<script type="text/javascript" src="jquery.js"></script>
+	<script src="jquery.timelinr-0.9.6.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+		$(function(){
+			$().timelinr()
+		});
+	</script>
+</head>
+<body id="introduction">
+<div id="page">
+<div class="demotips"><a href="index.html">演示一</a><a href="demo2.html">演示二</a><a href="demo3.html">演示三</a></div>
+	<div id="container" class="content clearfix">
+	<div id="timeline">
+		<ul id="dates">
+			<li><a href="#1900">1900</a></li>
+			<li><a href="#1944">1944</a></li>
+			<li><a href="#1950">1950</a></li>
+			<li><a href="#1971">1971</a></li>
+			<li><a href="#1999">1999</a></li>
+			<li><a href="#2001">2001</a></li>
+			<li><a href="#2011">2011</a></li>
+		</ul>
+		<ul id="issues">
+			<li id="1900">
+				<img src="images/tu1.jpg" width="256" height="256" />
+				<h1>1900</h1>
+				<p>计算机诞生  计算机诞生 计算机诞生 </p>
+			</li>
+			<li id="1944">
+				<img src="images/tu2.jpg" width="256" height="256" />
+				<h1>1944</h1>
+				<p>比尔诞生 比尔诞生 比尔诞生 </p>
+			</li>
+			<li id="1950">
+				<img src="images/tu3.jpg" width="256" height="256" />
+				<h1>1950</h1>
+				<p>蒋帮主诞生 蒋帮主诞生 蒋帮主诞生 </p>
+			</li>
+			<li id="1971">
+				<img src="images/tu4.jpg" width="256" height="256" />
+				<h1>1971</h1>
+				<p>CSDN诞生 CSDN诞生 CSDN诞生 </p>
+			</li>
+			<li id="1999">
+				<img src="images/tu5.jpg" width="256" height="256" />
+				<h1>1999</h1>
+				<p>乔布斯回来了 乔布斯回来了 乔布斯回来了 </p>
+			</li>
+			<li id="2001">
+				<img src="images/tu6.jpg" width="256" height="256" />
+				<h1>2001</h1>
+				<p>火星撞地球  火星撞地球 火星撞地球 </p>
+			</li>
+			<li id="2011">
+				<img src="images/tu8.jpg" width="256" height="256" />
+				<h1>2011</h1>
+				<p>鄙人退隐江湖 金盆洗手</p>
+			</li>
+		</ul>
+		<div id="grad_left"></div>
+		<div id="grad_right"></div>
+        <a href="#" id="next">+</a>
+		<a href="#" id="prev">-</a>
+	</div>
+  </div>
+<p text-align="center"></p><br>
+<p text-align="center"></p>  
+ </div> 
+</div>
+</body>
+</html>
+
